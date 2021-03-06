@@ -1,7 +1,12 @@
 <view class="index-page">
-    <view class="page__hd">
-        <view class="page__title">Tabbar</view>
-        <view class="page__desc">类似小程序原生tabbar的组件，可用于自定义tabbar</view>
+    <view hidden="{{currentIndex !== 0}}" class="photo-enter">
+        <view class="page__title">1</view>
     </view>
-    <mp-tabbar class="tabbar" list="{{list}}" bindchange="tabChange"></mp-tabbar>
+    <view hidden="{{currentIndex !== 1}}" class="shopping-enter">
+        <view class="page__title">2</view>
+    </view>
+    <view hidden="{{currentIndex !== 2}}" class="user-enter">
+        <view class="page__title">3</view>
+    </view>
+    <mp-tabbar class="tabbar" list="{{list}}" bindchange="tabChange" current="{{currentIndex}}"></mp-tabbar>
 </view>

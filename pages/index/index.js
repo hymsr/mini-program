@@ -14,9 +14,12 @@ Page({
 			text: '我的',
 			iconPath: '/assets/icons/user.png',
 			selectedIconPath: '/assets/icons/user_filled.png',
-		}]
+		}],
+		currentIndex: 0,
 	},
 	tabChange(e) {
-		console.log('tab change', e);
+		this.setData({
+			currentIndex: e.detail.index,
+		});
 	}
 });
