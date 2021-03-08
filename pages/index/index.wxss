@@ -6,3 +6,31 @@
   left:0;
   right:0;
 }
+.head-card{
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(10, 153, 219);
+  height: 200rpx;
+  width: 100%;  
+}
+.user_name{
+  position: absolute;
+  left: 50rpx;
+  color: #000;
+}
+.login{
+  position: absolute;
+  left: 20rpx;
+  color: #333;
+  background-color: transparent;   /*按钮透明*/  
+	border:none;				/*设置按钮边框*/
+}
+.login:active{
+  color: #000;
+}
+.title_img{
+  position: absolute;
+  right: 20rpx;
+  border-radius:50%;
+}

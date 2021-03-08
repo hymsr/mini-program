@@ -6,7 +6,19 @@
         <view class="page__title">2</view>
     </view>
     <view hidden="{{currentIndex !== 2}}" class="user-enter">
-        <view class="page__title">3</view>
+        <view class="head-card">
+            <view class="user_name" wx:if="{{isLogin}}">{{userInfo.nickName}}</view>
+            <button
+                class="login"
+                open-type="getUserInfo"
+                bindgetuserinfo="getUserInfo"
+                wx:if="{{isLogin !== true}}"
+            >
+                未登录/点击登录
+            </button>
+            <image class="title_img" bindload="imageLoad" src="{{profileUrl}}" 
+                style="width:{{imgwidth}}rpx; height:{{imgheight }}rpx;"></image>
+        </view>
     </view>
     <mp-tabbar class="tabbar" list="{{list}}" bindchange="tabChange" current="{{currentIndex}}"></mp-tabbar>
 </view>
