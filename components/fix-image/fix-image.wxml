@@ -1,0 +1,2 @@
+<!--components/fix-image.wxml-->
+<image bindload="imageLoad" src="{{src}}" style="width:{{imgwidth}}rpx; height:{{imgheight }}rpx;" ></image>

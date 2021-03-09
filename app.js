@@ -1,12 +1,12 @@
 // app.js
+import api from './api/index';
 App({
-	onLaunch() {
-		wx.login({
-			success: (res) => {
-				console.log(res);
-			},
-		});
-	},
-	globalData: {
-	}
+  onLaunch() {
+    wx.login({
+      success: (res) => {
+      },
+    });
+  },
+  globalData: {
+  }
 });

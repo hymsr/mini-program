@@ -34,3 +34,11 @@
   right: 20rpx;
   border-radius:50%;
 }
+.entry-list {
+  position: relative;
+  margin-top: 30rpx;
+}
+.entry-list>view{
+  position: relative;
+  margin-top: 30rpx;
+}

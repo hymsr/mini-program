@@ -19,6 +19,20 @@
             <image class="title_img" bindload="imageLoad" src="{{profileUrl}}" 
                 style="width:{{imgwidth}}rpx; height:{{imgheight }}rpx;"></image>
         </view>
+        <view class="entry-list">
+            <list-entry 
+                text="填写地址" 
+                jumpUrl="/pages/fillLocation/fill-location" 
+                headIconUrl="/assets/icons/location.svg"
+            />
+            <view>
+                <list-entry 
+                    text="订单历史" 
+                    jumpUrl="/pages/fillLocation/fill-location" 
+                    headIconUrl="/assets/icons/location.svg"
+                />
+            </view>
+        </view>
     </view>
     <mp-tabbar class="tabbar" list="{{list}}" bindchange="tabChange" current="{{currentIndex}}"></mp-tabbar>
 </view>

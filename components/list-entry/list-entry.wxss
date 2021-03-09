@@ -1,0 +1,15 @@
+/* components/list-entry.wxss */
+.list-entry {
+	position: relative;
+  display: flex;
+	align-items: center;
+	font-size: 40rpx;
+}
+.describe-text {
+	margin-left: 10rpx;
+}
+.bottom-arrow {
+	position: absolute;
+	margin-top: 8rpx;
+  right: 20rpx;
+}

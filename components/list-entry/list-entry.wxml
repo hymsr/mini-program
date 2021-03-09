@@ -1,0 +1,6 @@
+<!--components/list-entry.wxml-->
+<view class="list-entry" bindtap="jumpTo">
+	<fix-image class="head-icon" fixHeight="40"  src="{{headIconUrl}}"/>
+	<text class="describe-text">{{text}}</text>
+	<fix-image class="bottom-arrow" fixHeight="40"  src="/assets/icons/right_arrow.png"/>
+</view>

@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "mp-tabbar": "/miniprogram_npm/weui-miniprogram/tabbar/tabbar",
-    "mp-form": "/miniprogram_npm/weui-miniprogram/form/form"
+    "mp-form": "/miniprogram_npm/weui-miniprogram/form/form",
+    "list-entry": "/components/list-entry/list-entry"
   },
-  "navigationBarTitleText": "UI组件库"
+  "navigationBarTitleText": "小程序"
 }
