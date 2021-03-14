@@ -1,44 +1,52 @@
 /**index.wxss**/
-.tabbar{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  left:0;
-  right:0;
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
-.head-card{
+
+.head-card {
   position: relative;
   display: flex;
   align-items: center;
   background-color: rgb(10, 153, 219);
   height: 200rpx;
-  width: 100%;  
+  width: 100%;
 }
-.user_name{
+
+.user_name {
   position: absolute;
   left: 50rpx;
   color: #000;
 }
-.login{
+
+.login {
   position: absolute;
   left: 20rpx;
   color: #333;
-  background-color: transparent;   /*按钮透明*/  
-	border:none;				/*设置按钮边框*/
+  background-color: transparent;
+  /*按钮透明*/
+  border: none;
+  /*设置按钮边框*/
 }
-.login:active{
+
+.login:active {
   color: #000;
 }
-.title_img{
+
+.title_img {
   position: absolute;
   right: 20rpx;
-  border-radius:50%;
 }
+
 .entry-list {
   position: relative;
   margin-top: 30rpx;
 }
-.entry-list>view{
+
+.entry-list>view {
   position: relative;
   margin-top: 30rpx;
 }

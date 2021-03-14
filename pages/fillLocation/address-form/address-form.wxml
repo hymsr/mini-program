@@ -1,0 +1,38 @@
+<!--pages/fillLocation/address-form/address-form.wxml-->
+<view>
+	<form catchsubmit="formSubmit" catchreset="formReset">
+		<view class="page-section">
+			<view class="page-section-title">手机号</view>
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_input">
+					<view class="weui-cell__bd" style="margin: 30rpx 0">
+						<input class="weui-input" name="phone" placeholder="请输入手机号" />
+					</view>
+				</view>
+			</view>
+			<view class="page-section-title">地址</view>
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_input">
+					<view class="weui-cell__bd">
+						<input value='{{addressText}}' class="weui-input" name="address"
+							placeholder="请输入地址" />
+					</view>
+				</view>
+			</view>
+			<view class="page-section-title">收货人</view>
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_input">
+					<view class="weui-cell__bd">
+						<input value='{{userName}}' class="weui-input" name="userName"
+							placeholder="请输入收件人姓名" />
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="btn-area">
+			<button bindtap="useDefault">使用微信地址</button>
+			<button type="primary" formType="submit">确定</button>
+		</view>
+	</form>
+</view>

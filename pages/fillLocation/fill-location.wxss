@@ -1,1 +1,12 @@
 /* pages/fillLocation/fill-location.wxss */
+.location-bottom {
+	position: absolute;
+	bottom: 20rpx;
+	width: 100%;
+	background-color: #fff;
+}
+#new-location {
+	width: 90%;
+	background-color: coral;
+	color: white;
+}

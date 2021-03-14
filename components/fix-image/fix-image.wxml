@@ -1,2 +1,3 @@
 <!--components/fix-image.wxml-->
-<image bindload="imageLoad" src="{{src}}" style="width:{{imgwidth}}rpx; height:{{imgheight }}rpx;" ></image>
+<image class="{{isCircle?'circle':null}}" bindload="imageLoad" src="{{src}}"
+	style="width:{{imgwidth}}rpx; height:{{imgheight }}rpx;"></image>
