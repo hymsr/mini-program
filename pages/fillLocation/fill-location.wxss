@@ -1,12 +1,15 @@
 /* pages/fillLocation/fill-location.wxss */
+.address-container {
+	overflow-y: scroll;
+}
 .location-bottom {
-	position: absolute;
-	bottom: 20rpx;
+	position: fixed;
+	bottom: 0rpx;
 	width: 100%;
 	background-color: #fff;
 }
 #new-location {
-	width: 90%;
+	width: 100%;
 	background-color: coral;
 	color: white;
 }

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "address-item": "/components/address-item/addressItem"
+    "address-item": "/components/address-item/addressItem",
+    "div-line": "/components/div-line/div-line"
   }
 }

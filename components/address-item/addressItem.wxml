@@ -1,13 +1,13 @@
 <!--components/address-item/addressItem.wxml-->
 <view class="addressItem">
-	<view class="addressLeft">
+	<view class="address-left" bindtap="onSelect">
 		<view class="address-top">{{address}}</view>
 		<view class="address-bottom">
 			<view>{{userName}}</view>
-			<view>{{phone}}</view>
+			<view style="margin-left: 10rpx">{{phone}}</view>
 		</view>
 	</view>
-	<view>
-		<fix-image />
+	<view class="address-right" bindtap="onDelete">
+		<fix-image fixHeight="50" src="/assets/icons/delete.png" />
 	</view>
 </view>

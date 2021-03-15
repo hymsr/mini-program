@@ -1,14 +1,14 @@
 <!--pages/fillLocation/fill-location.wxml-->
 <view>
-	<view wx:for="addressList" wx:for-index="idx" wx:for-item="item">
-		<address-item
-			key="{{item.key}}"
-			address="{{item.address}}"
-			phone="{{item.phone}}"
-			userName="{{item.userName}}"
-		/>
+	<view class="address-container">
+		<view wx:for="{{addressList}}" wx:key="idx" wx:for-item="item">
+			<address-item key="{{item.key}}" address="{{item.address}}" phone="{{item.phone}}" userName="{{item.userName}}"
+				onDelete="{{deleteAddress}}" />
+			<div-line />
+		</view>
 	</view>
-	<view	class="location-bottom">
+
+	<view class="location-bottom">
 		<button id="new-location" bindtap="newAddress">新增收货地址</button>
 	</view>
 </view>

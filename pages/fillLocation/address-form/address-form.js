@@ -6,11 +6,9 @@ Page({
 		const pages = getCurrentPages();
 		const prevPage = pages[pages.length - 2];//上一个页面
 		const addressList = prevPage.data.addressList;
-		addressList.push({
-			
-		});
+		addressList.push(e.detail.value);
 		prevPage.setData({
-      mydata: { a: "2019-02-10", b: "bbb" }
+      addressList,
     });
 		wx.navigateBack({
 			delta: 1,

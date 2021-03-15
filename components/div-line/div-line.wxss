@@ -1,0 +1,6 @@
+/* components/div-line/div-line.wxss */
+.div-line {
+	background: #E0E3DA;
+ 	width: 100%;
+ 	height: 1rpx;
+}

@@ -1,1 +1,24 @@
 /* components/address-item/addressItem.wxss */
+.address-left {
+	display: flex;
+	flex-direction: column;
+}
+.address-right {
+	float: right;
+}
+.address-top {
+	font-size: 40rpx;
+}
+.address-bottom {
+	font-weight: lighter;
+	font-size: 30rpx;
+	display: flex;
+	flex-direction: row;
+}
+.addressItem {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}

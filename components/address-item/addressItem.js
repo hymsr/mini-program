@@ -16,11 +16,24 @@ Component({
 		key: {
 			type: String,
 		},
+		onSelect: {
+			type: Function,
+			value: () => {},
+		},
+		onDelete: {
+			type: Function,
+			value: () => {},
+		}
 	},
 	data: {
 
 	},
 	methods: {
-
+		onSelect: function(e) {
+			this.properties.onSelect(e);
+		},
+		onDelete: function(e) {
+			this.properties.onDelete(e);
+		},
 	}
 })
