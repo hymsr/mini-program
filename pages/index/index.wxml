@@ -1,4 +1,5 @@
 <view class="index-page">
+    <navigator id="navigator" open-type="exit" target="miniProgram"/>
     <view hidden="{{currentIndex !== 0}}" class="photo-enter">
         <view class="page__title">1</view>
     </view>
@@ -12,7 +13,7 @@
                 未登录/点击登录
             </button>
             <view class="title_img">
-                <fix-image isCircle="{{true}}" fixHeight="150" src="{{profileUrl}}" />
+                <fix-image isCircle="{{true}}" fixHeight="150" src="{{userInfo.avatarUrl}}" />
             </view>
         </view>
         <view class="entry-list">

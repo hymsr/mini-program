@@ -3,7 +3,8 @@
 		"pages/index/index",
 		"pages/logs/logs",
 		"pages/fillLocation/fill-location",
-		"pages/fillLocation/address-form/address-form"
+		"pages/fillLocation/address-form/address-form",
+		"pages/failPage/failPage"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
