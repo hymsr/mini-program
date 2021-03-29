@@ -2,7 +2,7 @@
 import api from './api/index';
 import ls from './utils/local-storage';
 App({
-  require : function($uri){return require($uri)},
+  require: function ($uri) { return require($uri) },
   onLaunch() {
     wx.showLoading({
       title: '加载中',
@@ -11,18 +11,21 @@ App({
     wx.login({
       success: (res) => {
         api.getOpenId({
-          data: {
-            code: res.code,
-          },
-          success: (res) => {
-            this.globalData.openid = res.openid;
-          },
-          fail: () => {
-          },
-          complete: () => {
-            wx.hideLoading();
-          },
+          code: res.code,
         })
+          .then(res => {
+            this.globalData.openid = res.openid;
+          })
+          .catch(() => wx.redirectTo({
+            url: '/pages/failPage/failPage',
+          }))
+          .finally(() => wx.hideLoading());
+      },
+      fail: () => {
+        wx.hideLoading();
+        wx.redirectTo({
+          url: '/pages/failPage/failPage',
+        });
       },
     });
   },

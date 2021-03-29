@@ -7,43 +7,48 @@ const doNothing = () => { };
 
 const host = 'http://www.liiux.cn:8080';
 
-const request = ({ success = doNothing, fail = doNothing, complete, data, url, method = 'POST' } = {}) => {
-  // withBasicData(data);
-  const commonFail = (res) => {
+const handleErr = (msg) => {
     wx.showModal({
       title: '提示',
-      content: res.data.msg,
+      content: msg || '请求失败',
       showCancel: false,
-      complete: fail(res.data),
     });
-  };
+}
 
-  return wx.request({
+const request = ({ data, url, method = 'POST' } = {}) => {
+  return new Promise((resolve, reject) => wx.request({
     method,
     data,
-    complete,
     success: (res) => {
       if (res.data.ret === 0) {
-        success(res.data);
+        resolve(res.data);
         return;
       };
-      fail(res.data);
+      console.log(res)
+      handleErr(res.data.msg);
+      reject(res.data.msg);
     },
-    fail: commonFail,
+    fail: (res) => {
+      handleErr(res.errMsg);
+      reject(res.errMsg);
+    },
     url: `${host}${url}`
-  });
+  }));
 };
 
 const api = {
-  getOpenId: ({ complete, success, fail, data } = {}) => {
+  getOpenId: (data = {}) => {
     return request({
       url: `/user/openid/${data.code}`,
       method: 'GET',
-      success,
-      fail,
-      complete,
     });
   },
+  getAllAddress: (data = {}) => {
+    return request({
+      url: `/user/addressList/${data.openid}`,
+      method: 'GET',
+    });
+  },  
 };
 
 export default api;

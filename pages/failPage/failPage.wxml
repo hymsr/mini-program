@@ -1,2 +1,12 @@
 <!--pages/failPage/failPage.wxml-->
-<text>pages/failPage/failPage.wxml</text>
+<view>
+	<view class="child-horizontally-center">
+		<fix-image src="/assets/fail.png" fixHeight="500"/>
+	</view>
+	<view class="child-vertical-center child-flex-direction-column">
+		<text>小程序出现了致命错误，请退出微信</text>
+		<view class="location-bottom">
+			<navigator  target="miniProgram" open-type="exit">退出小程序</navigator>
+		</view>
+	</view>
+</view>

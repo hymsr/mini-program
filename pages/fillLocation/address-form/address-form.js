@@ -6,6 +6,8 @@ Page({
 		const pages = getCurrentPages();
 		const prevPage = pages[pages.length - 2];//上一个页面
 		const addressList = prevPage.data.addressList;
+		
+		console.log(addressList);
 		addressList.push(e.detail.value);
 		prevPage.setData({
       addressList,

@@ -10,7 +10,7 @@
         <view class="head-card">
             <view class="user_name" wx:if="{{isLogin}}">{{userInfo.nickName}}</view>
             <button class="login" open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:if="{{isLogin !== true}}">
-                未登录/点击登录
+                点击使用微信信息
             </button>
             <view class="title_img">
                 <fix-image isCircle="{{true}}" fixHeight="150" src="{{userInfo.avatarUrl}}" />

@@ -9,3 +9,18 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.child-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.child-horizontally-center {
+  display: flex;
+  justify-content: center;
+}
+
+.child-flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
