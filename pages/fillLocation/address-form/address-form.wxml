@@ -6,7 +6,7 @@
 			<view class="weui-cells weui-cells_after-title">
 				<view class="weui-cell weui-cell_input">
 					<view class="weui-cell__bd" style="margin: 30rpx 0">
-						<input class="weui-input" name="phone" placeholder="请输入手机号" />
+						<input class="weui-input" name="tel" placeholder="请输入手机号" />
 					</view>
 				</view>
 			</view>
@@ -14,7 +14,7 @@
 			<view class="weui-cells weui-cells_after-title">
 				<view class="weui-cell weui-cell_input">
 					<view class="weui-cell__bd">
-						<input value='{{addressText}}' class="weui-input" name="address"
+						<input value='{{addressText}}' class="weui-input" name="detailAddress"
 							placeholder="请输入地址" />
 					</view>
 				</view>
@@ -23,7 +23,7 @@
 			<view class="weui-cells weui-cells_after-title">
 				<view class="weui-cell weui-cell_input">
 					<view class="weui-cell__bd">
-						<input value='{{userName}}' class="weui-input" name="userName"
+						<input value='{{userName}}' class="weui-input" name="name"
 							placeholder="请输入收件人姓名" />
 					</view>
 				</view>

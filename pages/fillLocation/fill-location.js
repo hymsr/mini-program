@@ -3,7 +3,12 @@ const app = getApp();
 
 Page({
   data: {
-    addressList: [],
+    addressList: [{
+      id: 12,
+      detailAddress: '地址',
+      name: '名字',
+      tel: '123123',
+    }],
     deleteAddress: function () {
       console.log(1);
     },

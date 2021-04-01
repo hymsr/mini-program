@@ -7,14 +7,14 @@ Component({
 		address: {
 			type: String,
 		},
-		userName: {
+		name: {
 			type: String,
 		},
-		phone: {
+		tel: {
 			type: String,
 		},
-		key: {
-			type: String,
+		addressId: {
+			type: Number,
 		},
 		onSelect: {
 			type: Function,
@@ -34,6 +34,11 @@ Component({
 		},
 		onDelete: function(e) {
 			this.properties.onDelete(e);
+		},
+		edit: function() {
+			wx.navigateTo({
+				url: `/pages/fillLocation/address-form/address-form?id=${this.properties.addressId}`,
+			})
 		},
 	}
 })

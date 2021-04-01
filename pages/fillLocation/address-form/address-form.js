@@ -1,19 +1,35 @@
+const app = getApp();
+import api from '../../../api/index';
+
 Page({
 	data: {
-
+		id: ''
+	},
+	onLoad: function (match) {
+		console.log(match.id);
 	},
 	formSubmit: function (e) {
-		const pages = getCurrentPages();
-		const prevPage = pages[pages.length - 2];//上一个页面
-		const addressList = prevPage.data.addressList;
+		wx.showLoading({
+      title: 'loading',
+      mask: 'true',
+		});
 		
-		console.log(addressList);
-		addressList.push(e.detail.value);
-		prevPage.setData({
-      addressList,
-    });
-		wx.navigateBack({
-			delta: 1,
+		api.newAddress({
+			openid: app.globalData.openid,
+			id: this.data.id || undefined,
+			isDefault: 0,
+			...e.detail.value,
+		}).then(() => {
+			wx.showModal({
+				title: '提示',
+				content: '提交成功',
+				showCancel: false,
+			});
+			wx.navigateBack({
+				delta: 1,
+			});
+		}).finally(() => {
+			wx.hideLoading();
 		});
 	},
 	useDefault: function (e) {

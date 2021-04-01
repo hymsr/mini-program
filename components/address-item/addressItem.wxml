@@ -1,13 +1,22 @@
 <!--components/address-item/addressItem.wxml-->
-<view class="addressItem">
-	<view class="address-left" bindtap="onSelect">
-		<view class="address-top">{{address}}</view>
-		<view class="address-bottom">
-			<view>{{userName}}</view>
-			<view style="margin-left: 10rpx">{{phone}}</view>
+<view class="card">
+	<view class="addressItem">
+		<view class="top">
+			<view class="top-left">
+				<view class="top-left-top">
+					<view>{{name}}</view>
+					<view style="margin-left: 10rpx; font-weight: lighter; font-size: 30rpx">{{tel}}</view>
+				</view>
+				<view class="top-left-bottom">{{address}}</view>
+			</view>
+			<view class="top-right" bindtap="edit">
+				<fix-image fixHeight="50" src="/assets/icons/edit.png" />
+			</view>
 		</view>
-	</view>
-	<view class="address-right" bindtap="onDelete">
-		<fix-image fixHeight="50" src="/assets/icons/delete.png" />
+
+		<view class="bottom">
+			<checkbox value="{{item.value}}" checked="{{item.checked}}">是否默认</checkbox>
+			<fix-image fixHeight="50" src="/assets/icons/delete.png" />
+		</view>
 	</view>
 </view>

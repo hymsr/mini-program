@@ -24,7 +24,6 @@ const request = ({ data, url, method = 'POST' } = {}) => {
         resolve(res.data);
         return;
       };
-      console.log(res)
       handleErr(res.data.msg);
       reject(res.data.msg);
     },
@@ -49,6 +48,20 @@ const api = {
       method: 'GET',
     });
   },  
+  newAddress: (data = {}) => {
+    return request({
+      data,
+      url: `/user/address/${data.openid}`,
+      method: 'POST',
+    });
+  },
+  setAddress: (data = {}) => {
+    return request({
+      data,
+      url: `/user/address/${data.openid}`,
+      method: 'PUT',
+    });
+  },
 };
 
 export default api;

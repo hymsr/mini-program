@@ -2,7 +2,7 @@
 <view>
 	<view class="address-container">
 		<view wx:for="{{addressList}}" wx:key="idx" wx:for-item="item">
-			<address-item key="{{item.key}}" address="{{item.address}}" phone="{{item.phone}}" userName="{{item.userName}}"
+			<address-item key="{{idx}}" addressId="{{item.id}}" address="{{item.detailAddress}}" tel="{{item.tel}}" name="{{item.name}}"
 				onDelete="{{deleteAddress}}" />
 			<div-line />
 		</view>
