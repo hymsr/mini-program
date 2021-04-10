@@ -4,7 +4,8 @@
 		"pages/logs/logs",
 		"pages/fillLocation/fill-location",
 		"pages/fillLocation/address-form/address-form",
-		"pages/failPage/failPage"
+		"pages/failPage/failPage",
+		"pages/orderList/orderList"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

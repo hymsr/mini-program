@@ -1,3 +1,6 @@
+import api from '../../api/index';
+const app = getApp();
+
 // components/address-item/addressItem.js
 Component({
 	/**
@@ -26,7 +29,9 @@ Component({
 		}
 	},
 	data: {
-
+		checkbox: [
+      {value: 'isDefault', name: '默认'},
+    ],
 	},
 	methods: {
 		onSelect: function(e) {
@@ -40,5 +45,27 @@ Component({
 				url: `/pages/fillLocation/address-form/address-form?id=${this.properties.addressId}`,
 			})
 		},
-	}
+		setDefault: function(e) {
+			const checkbox = this.data.checkbox[0];
+			api.setDefaultAddress({
+				openid: app.globalData.openid,
+				addressId: this.properties.addressId,
+			}).then(() => {
+				wx.showModal({
+					title: '提示',
+					content: '提交成功',
+					showCancel: false,
+				});
+				checkbox.checked = true;
+				this.setData({
+					checkbox: [checkbox],
+				});
+			}).catch(() => {
+				checkbox.checked = false;
+				this.setData({
+					checkbox: [checkbox],
+				});
+			});
+		},
+ 	}
 })

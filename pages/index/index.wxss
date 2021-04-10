@@ -16,6 +16,13 @@
   width: 100%;
 }
 
+.side-card {
+  position: relative;
+  background-color: #f00;
+  width: 200rpx;
+  height: 100%;
+}
+
 .user_name {
   position: absolute;
   left: 50rpx;

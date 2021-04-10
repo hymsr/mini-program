@@ -3,17 +3,11 @@ const app = getApp();
 
 Page({
   data: {
-    addressList: [{
-      id: 12,
-      detailAddress: '地址',
-      name: '名字',
-      tel: '123123',
-    }],
-    deleteAddress: function () {
-      console.log(1);
-    },
+    addressList: [],
   },
   onLoad: function () {
+  },
+  onShow: function () {
     wx.showLoading({
       title: '加载中',
       mask: 'true',
@@ -23,8 +17,6 @@ Page({
     }).then((res) => {
       this.data.addressList = res;
     }).finally(() => wx.hideLoading());
-  },
-  onShow: function () {
   },
   newAddress() {
     wx.navigateTo({

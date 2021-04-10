@@ -4,7 +4,11 @@
         <view class="page__title">1</view>
     </view>
     <view hidden="{{currentIndex !== 1}}" class="shopping-enter">
-        <view class="page__title">2</view>
+        <view class="head-card">
+        </view>
+        <view class="side-card">
+            
+        </view>
     </view>
     <view hidden="{{currentIndex !== 2}}" class="user-enter">
         <view class="head-card">
@@ -20,8 +24,8 @@
             <list-entry text="填写地址" jumpUrl="/pages/fillLocation/fill-location"
                 headIconUrl="/assets/icons/location.svg" />
             <view>
-                <list-entry text="订单历史" jumpUrl="/pages/fillLocation/fill-location"
-                    headIconUrl="/assets/icons/location.svg" />
+                <list-entry text="订单历史" jumpUrl="/pages/orderList/orderList"
+                    headIconUrl="/assets/icons/order.png" />
             </view>
         </view>
     </view>

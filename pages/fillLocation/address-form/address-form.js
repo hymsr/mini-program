@@ -6,7 +6,12 @@ Page({
 		id: ''
 	},
 	onLoad: function (match) {
-		console.log(match.id);
+		if (!match.id) return;
+		api.getAddress({
+			addressId: match.id,
+		}).then((res) => {
+
+		});
 	},
 	formSubmit: function (e) {
 		wx.showLoading({

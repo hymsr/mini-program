@@ -42,6 +42,12 @@ const api = {
       method: 'GET',
     });
   },
+  getAddress: (data = {}) => {
+    return request({
+      url: `/user/address/${data.addressId}`,
+      method: 'GET',
+    });
+  },  
   getAllAddress: (data = {}) => {
     return request({
       url: `/user/addressList/${data.openid}`,
@@ -59,6 +65,13 @@ const api = {
     return request({
       data,
       url: `/user/address/${data.openid}`,
+      method: 'PUT',
+    });
+  },
+  setDefaultAddress: (data = {}) => {
+    return request({
+      data,
+      url: `/user/defalutAddress/${data.openid}/${data.addressId}`,
       method: 'PUT',
     });
   },
