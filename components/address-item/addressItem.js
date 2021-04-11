@@ -23,10 +23,6 @@ Component({
 			type: Function,
 			value: () => {},
 		},
-		onDelete: {
-			type: Function,
-			value: () => {},
-		}
 	},
 	data: {
 		checkbox: [

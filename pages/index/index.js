@@ -21,6 +21,17 @@ Page({
 		currentIndex: 0,
 		profileUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1986451467,394304688&fm=26&gp=0.jpg',
 		isLogin: 'false',
+		searchInput: '',
+		classList: [
+			{
+				text: '食品',
+				value: 'food',
+			},
+			{
+				text: '衣服',
+				value: 'wear',
+			},
+		],
 	},
 	onLoad() {
 		this.setData({
@@ -49,6 +60,14 @@ Page({
 		this.setData({
 			userInfo: e.detail.userInfo,
 			isLogin: true,
+		});
+	},
+	startSearch() {
+		console.log(this.data.searchInput);
+	},
+	onSearchChange(e) {
+		this.setData({
+			searchInput: e.detail.value,
 		});
 	},
 });

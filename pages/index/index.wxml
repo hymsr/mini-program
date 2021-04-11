@@ -4,10 +4,19 @@
         <view class="page__title">1</view>
     </view>
     <view hidden="{{currentIndex !== 1}}" class="shopping-enter">
-        <view class="head-card">
+        <view class="head-card child-horizontally-center" style="height: 100rpx; background-color: #fff;">
+            <view class="search-input child-vertical-center">
+                <input class="weui-input" placeholder="" bindconfirm="startSearch" value="{{searchInput}}" bindinput="onSearchChange"></input>
+                <view bindtap="startSearch">
+                    <fix-image src="/assets/icons/search.png" fix-height="50"></fix-image>
+                </view>
+            </view>
         </view>
         <view class="side-card">
-            
+            <view class="classList" wx:for="{{classList}}" wx:key="idx" wx:for-item="item">
+                <text class="classItem" id="idx">{{item.text}}</text>
+                <text class="classItem is-selected">{{item.text}}</text>
+            </view>
         </view>
     </view>
     <view hidden="{{currentIndex !== 2}}" class="user-enter">

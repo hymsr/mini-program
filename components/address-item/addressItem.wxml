@@ -18,7 +18,9 @@
 			<checkbox-group bindchange="setDefault">
 				<checkbox value="{{checkbox[0].value}}" checked="{{checkbox[0].checked}}">是否默认</checkbox>
 			</checkbox-group>
-			<fix-image fixHeight="50" src="/assets/icons/delete.png" />
+			<view bindtap="onDelete">
+				<fix-image fixHeight="50" src="/assets/icons/delete.png" />
+			</view>
 		</view>
 	</view>
 </view>

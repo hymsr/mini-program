@@ -3,7 +3,8 @@
     "mp-tabbar": "/miniprogram_npm/weui-miniprogram/tabbar/tabbar",
     "mp-form": "/miniprogram_npm/weui-miniprogram/form/form",
     "list-entry": "/components/list-entry/list-entry",
-    "fix-image": "/components/fix-image/fix-image"
+    "fix-image": "/components/fix-image/fix-image",
+    "div-line": "/components/div-line/div-line"
   },
   "navigationBarTitleText": "小程序"
 }
