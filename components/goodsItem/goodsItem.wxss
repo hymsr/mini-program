@@ -1,0 +1,10 @@
+.goodsItem {
+	height: 30 rpx;
+	display: flex;
+	flex-direction: row;
+}
+
+.desc {
+	display: flex;
+	flex-direction: column;
+}

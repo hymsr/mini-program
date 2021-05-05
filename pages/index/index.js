@@ -1,4 +1,5 @@
 const app = getApp();
+import api from '../../api/index';
 import ls from '../../utils/local-storage'
 
 Page({
@@ -22,16 +23,7 @@ Page({
 		profileUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1986451467,394304688&fm=26&gp=0.jpg',
 		isLogin: 'false',
 		searchInput: '',
-		classList: [
-			{
-				text: '食品',
-				value: 'food',
-			},
-			{
-				text: '衣服',
-				value: 'wear',
-			},
-		],
+		goodsList: [],
 	},
 	onLoad() {
 		this.setData({
@@ -43,6 +35,9 @@ Page({
 		this.setData({
 			currentIndex: e.detail.index,
 		});
+		if (e.detail.index === 1) {
+			this.startSearch();
+		}
 	},
 	imageLoad: function (e) {
 		const $width = e.detail.width,    //获取图片真实宽度
@@ -63,7 +58,20 @@ Page({
 		});
 	},
 	startSearch() {
-		console.log(this.data.searchInput);
+		wx.showLoading({
+      title: '加载中',
+      mask: 'true',
+    });
+		api.getGoods({
+			page_index: 1,
+			page_size: -1,
+		}).then(res => {
+			this.setData({
+				goodsList: res.commodity,
+			});
+		}).finally(() => {
+			wx.hideLoading();
+		});
 	},
 	onSearchChange(e) {
 		this.setData({

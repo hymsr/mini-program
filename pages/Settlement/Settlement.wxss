@@ -1,0 +1,8 @@
+.address-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(10, 153, 219);
+  height: 180rpx;
+  width: 100%;
+}

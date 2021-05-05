@@ -1,0 +1,6 @@
+{
+	"component": true,
+	"usingComponents": {
+		"fix-image": "/components/fix-image/fix-image"
+	}
+}

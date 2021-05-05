@@ -5,7 +5,9 @@
 		"pages/fillLocation/fill-location",
 		"pages/fillLocation/address-form/address-form",
 		"pages/failPage/failPage",
-		"pages/orderList/orderList"
+		"pages/orderList/orderList",
+		"pages/scoreHistory/scoreHistory",
+		"pages/Settlement/Settlement"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

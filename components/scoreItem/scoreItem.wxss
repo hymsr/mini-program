@@ -1,0 +1,9 @@
+.goodsItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.left {
+	display: flex;
+	flex-direction: column;
+}

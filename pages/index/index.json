@@ -4,7 +4,8 @@
     "mp-form": "/miniprogram_npm/weui-miniprogram/form/form",
     "list-entry": "/components/list-entry/list-entry",
     "fix-image": "/components/fix-image/fix-image",
-    "div-line": "/components/div-line/div-line"
+    "div-line": "/components/div-line/div-line",
+    "goodsItem": "/components/goodsItem/goodsItem"
   },
   "navigationBarTitleText": "小程序"
 }

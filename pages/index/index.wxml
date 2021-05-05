@@ -1,21 +1,21 @@
 <view class="index-page">
-    <navigator id="navigator" open-type="exit" target="miniProgram"/>
+    <navigator id="navigator" open-type="exit" target="miniProgram" />
     <view hidden="{{currentIndex !== 0}}" class="photo-enter">
         <view class="page__title">1</view>
     </view>
     <view hidden="{{currentIndex !== 1}}" class="shopping-enter">
         <view class="head-card child-horizontally-center" style="height: 100rpx; background-color: #fff;">
             <view class="search-input child-vertical-center">
-                <input class="weui-input" placeholder="" bindconfirm="startSearch" value="{{searchInput}}" bindinput="onSearchChange"></input>
+                <input class="weui-input" placeholder="" bindconfirm="startSearch" value="{{searchInput}}"
+                    bindinput="onSearchChange"></input>
                 <view bindtap="startSearch">
                     <fix-image src="/assets/icons/search.png" fix-height="50"></fix-image>
                 </view>
             </view>
         </view>
-        <view class="side-card">
-            <view class="classList" wx:for="{{classList}}" wx:key="idx" wx:for-item="item">
-                <text class="classItem" id="idx">{{item.text}}</text>
-                <text class="classItem is-selected">{{item.text}}</text>
+        <view wx:for="{{goodsList}}" wx:key="idx" wx:for-item="item">
+            <view key="{{idx}}">
+                <goodsItem goodsId="{{item.id}}" image="{{item.image}}" name="{{item.name}}" needScore="{{item.needScore}}" />
             </view>
         </view>
     </view>
@@ -30,12 +30,18 @@
             </view>
         </view>
         <view class="entry-list">
-            <list-entry text="填写地址" jumpUrl="/pages/fillLocation/fill-location"
-                headIconUrl="/assets/icons/location.svg" />
             <view>
-                <list-entry text="订单历史" jumpUrl="/pages/orderList/orderList"
-                    headIconUrl="/assets/icons/order.png" />
+                <list-entry text="填写地址" jumpUrl="/pages/fillLocation/fill-location"
+                    headIconUrl="/assets/icons/location.svg" />
             </view>
+            <view>
+                <list-entry text="订单历史" jumpUrl="/pages/orderList/orderList" headIconUrl="/assets/icons/order.png" />
+            </view>
+            <view>
+                <list-entry text="积分历史" jumpUrl="/pages/scoreHistory/scoreHistory"
+                    headIconUrl="/assets/icons/icon_score.png" />
+            </view>
+
         </view>
     </view>
     <mp-tabbar class="tabbar" list="{{list}}" bindchange="tabChange" current="{{currentIndex}}"></mp-tabbar>

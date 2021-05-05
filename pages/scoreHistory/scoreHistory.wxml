@@ -1,0 +1,5 @@
+<view wx:for="scoreChangeList" wx:for-item="log" wx:key="idx">
+	<view>
+		
+	</view>
+</view>

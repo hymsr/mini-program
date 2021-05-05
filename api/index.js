@@ -5,7 +5,7 @@ const doNothing = () => { };
 //   return;
 // };
 
-const host = 'http://www.liiux.cn:8080';
+const host = 'https://www.liiux.cn/server';
 
 const handleErr = (msg) => {
     wx.showModal({
@@ -19,6 +19,7 @@ const request = ({ data, url, method = 'POST' } = {}) => {
   return new Promise((resolve, reject) => wx.request({
     method,
     data,
+    timeout: 30000,
     success: (res) => {
       if (res.data.ret === 0) {
         resolve(res.data);
@@ -73,6 +74,30 @@ const api = {
       data,
       url: `/user/defalutAddress/${data.openid}/${data.addressId}`,
       method: 'PUT',
+    });
+  },
+  getDefaultAddress: (data = {}) => {
+    return request({
+      url: `/user/defalutAddress/${data.openid}`,
+      method: 'GET',
+    });
+  },
+  getGoods: (data = {}) => {
+    return request({
+      url: `/commodity/all/${data.page_index}/${data.page_size}`,
+      method: 'GET',
+    });
+  },
+  getGoodsItem: (data = {}) => {
+    return request({
+      url: `/commodity/${data.id}`,
+      method: 'GET',
+    });
+  },
+  getScoreHistory: (data = {}) => {
+    return request({
+      url: `/user/scoreChange/${data.openid}`,
+      method: 'GET',
     });
   },
 };

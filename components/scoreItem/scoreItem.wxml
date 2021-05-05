@@ -1,0 +1,13 @@
+<view class="goodsItem">
+	<view class="left">
+		<view>
+			{{date}}
+		</view>
+		<view>
+			{{mark}}
+		</view>
+	</view>
+	<view class="right">
+		{{changeScores}}
+	</view>
+</view>
