@@ -2,7 +2,44 @@
   position: relative;
   display: flex;
   align-items: center;
-  background-color: rgb(10, 153, 219);
   height: 180rpx;
-  width: 100%;
+	width: 100%;
+	border: 1px solid #555;
+}
+/* components/address-item/addressItem.wxss */
+.card {
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+	border-radius: 2%;
+	margin-top: 8rpx;
+}
+.addressItem {
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+.top {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.top-left {
+	display: flex;
+	flex-direction: column;
+}
+.top-left-top {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.top-right {
+	float: right;
+}
+.bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }

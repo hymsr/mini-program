@@ -84,7 +84,7 @@ const api = {
   },
   getGoods: (data = {}) => {
     return request({
-      url: `/commodity/all/${data.page_index}/${data.page_size}`,
+      url: `/commodity/sale/${data.page_index}/${data.page_size}`,
       method: 'GET',
     });
   },

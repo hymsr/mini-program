@@ -3,7 +3,11 @@ const app = getApp();
 
 Page({
 	data: {
-
+		address: {
+			name: "name",
+			tel: "17802007048",
+			detailAddress: "123-131-123",
+		},
 	},
 	onLoad: function (match) {
 		(async function () {

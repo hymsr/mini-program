@@ -23,7 +23,14 @@ Page({
 		profileUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1986451467,394304688&fm=26&gp=0.jpg',
 		isLogin: 'false',
 		searchInput: '',
-		goodsList: [],
+		goodsList: [
+			{
+				id: 1,
+				name: "name",
+				needScores: 1,
+				image: 'https://www.liiux.cn/server/image/commodity/72cfc318835e4979b9524dc758c4301d.jpeg',
+			}
+		],
 	},
 	onLoad() {
 		this.setData({
@@ -36,7 +43,12 @@ Page({
 			currentIndex: e.detail.index,
 		});
 		if (e.detail.index === 1) {
-			this.startSearch();
+			if (!this.data.init) {
+				this.startSearch();
+				this.setData({
+					init: true,
+				});
+			}
 		}
 	},
 	imageLoad: function (e) {

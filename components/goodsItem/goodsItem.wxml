@@ -1,15 +1,16 @@
 <view class="goodsItem">
-	<fix-image src="{{image}}" fix-height="50"/>
-	<view class="desc">
-		<view>
-			{{name}}
-		</view>
-		<view>
-			所需积分: {{needScore}}
+	<view class="left">
+		<fix-image src="{{image}}" fixHeight="120" />
+		<view class="desc">
+			<view>
+				{{name}}
+			</view>
+			<view class="score">
+				所需积分: {{needScore}}
+			</view>
 		</view>
 	</view>
 	<view class="goods-op">
 		<a bindtap="buyNow">立即购买</a>
-		<a bindtap="toShopCar">加入购物车</a>
 	</view>
 </view>

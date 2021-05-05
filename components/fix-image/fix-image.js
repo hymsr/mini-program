@@ -22,7 +22,8 @@ Component({
 	 * 组件的初始数据
 	 */
 	data: {
-
+		imgwidth: 40,
+		imgheight: 40,
 	},
 
 	/**

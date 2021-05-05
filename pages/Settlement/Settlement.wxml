@@ -1,6 +1,18 @@
 <!--pages/Settlement/Settlement.wxml-->
 <view>
 	<view class="address-card">
+		<view class="top">
+			<view class="top-left">
+				地址信息：
+				<view class="top-left-top">
+					<view>{{address.name}}</view>
+					<view style="margin-left: 10rpx; font-weight: lighter; font-size: 30rpx">{{address.tel}}</view>
+				</view>
+				<view class="top-left-bottom">{{address.detailAddress}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="goods-card">
 		
 	</view>
 </view>

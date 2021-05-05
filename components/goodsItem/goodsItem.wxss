@@ -1,10 +1,27 @@
 .goodsItem {
-	height: 30 rpx;
+	height: 120rpx;
 	display: flex;
 	flex-direction: row;
+  border: 1px solid #555;
+	justify-content: space-between;
+}
+
+.left {
+	display: flex;
+	flex-direction: row;
+}
+
+.score {
+	font-size: 24rpx;
 }
 
 .desc {
 	display: flex;
 	flex-direction: column;
+}
+.goods-op {
+	color: blue;
+	display: flex;
+	justify-content: center;
+  align-items: center;
 }
