@@ -10,6 +10,9 @@
 				</view>
 				<view class="top-left-bottom">{{address.detailAddress}}</view>
 			</view>
+			<view class="top-right" bindtap="edit">
+				<fix-image fixHeight="50" src="/assets/icons/edit.png" />
+			</view>
 		</view>
 	</view>
 	<view class="goods-card">

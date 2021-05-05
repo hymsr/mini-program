@@ -15,18 +15,36 @@ Page({
 				title: '加载中',
 				mask: 'true',
 			});
-			const address = await api.getDefaultAddress({
-				openid: app.globalData.openid,
-			});
-			const good =  await api.getGoodsItem({
-				id: match.id,
-			});
-			this.setData({
-				address: address.address,
-				good: good.commodity,
-			});
-			wx.hideLoading();
+			try {
+				const address = await api.getDefaultAddress({
+					openid: app.globalData.openid,
+				});
+				const good = await api.getGoodsItem({
+					id: match.id,
+				});
+				this.setData({
+					address: address.address,
+					good: good.commodity,
+				});
+				wx.hideLoading();
+			} catch (e) {
+				wx.hideLoading();
+			}
 		})();
+	},
+	method: {
+		edit() {
+			console.log(1);
+			wx.navigateTo({
+				url: '/pages/fillLocation/fill-location',
+			});
+		},
+	},
+	edit() {
+		console.log(1);
+		wx.navigateTo({
+			url: '/pages/fillLocation/fill-location',
+		});
 	},
 	onReady: function () {
 

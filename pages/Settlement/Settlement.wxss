@@ -36,7 +36,8 @@
 	align-items: center;
 }
 .top-right {
-	float: right;
+	position: absolute;
+	right: 4rpx;
 }
 .bottom {
 	display: flex;

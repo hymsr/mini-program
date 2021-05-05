@@ -1,6 +1,6 @@
 <view class="goodsItem">
 	<view class="left">
-		<fix-image src="{{image}}" fixHeight="120" />
+		<fix-image src="{{image}}" fixHeight="120"/>
 		<view class="desc">
 			<view>
 				{{name}}
