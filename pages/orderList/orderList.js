@@ -1,65 +1,59 @@
-// pages/orderList/orderList.js
+import api from '../../api/index';
+const app = getApp();
+
 Page({
-
-	/**
-	 * 页面的初始数据
-	 */
 	data: {
-
+		orderList: [
+			{
+				id: "order_id",
+				time: 100000,
+				status: "已发货",
+				commodity: {
+					id: 1,
+					name: "name",
+					needScores: 500,
+					image: "image",
+					inventory: 2,
+					isForSale: 1
+				},
+				address: {
+					id: 123,
+					name: "name",
+					tel: "tel",
+					detailAddress: "detailAddress",
+				},
+			},
+		]
 	},
-
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
 	onLoad: function (options) {
-
+		api.getOrderList({
+			openid: app.globalData.openid,
+		}).then(res => {
+			this.setData({
+				orderList: res.orderList,
+			});
+		});
 	},
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
 	onReady: function () {
 
 	},
 
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
 	onShow: function () {
 
 	},
 
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
 	onHide: function () {
 
 	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
 	onUnload: function () {
 
 	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
 	onPullDownRefresh: function () {
 
 	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
 	onReachBottom: function () {
 
 	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
 	onShareAppMessage: function () {
 
 	}

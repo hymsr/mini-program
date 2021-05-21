@@ -90,3 +90,7 @@
 .is-selected {
   background-color: #eeeeee;
 }
+.btn {
+  display: flex;
+  justify-content: center;
+}

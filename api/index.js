@@ -100,6 +100,18 @@ const api = {
       method: 'GET',
     });
   },
+  createOrder: (data = {}) => {
+    return request({
+      url: `/order/${data.openid}}/${data.addressId}/${data.commodityId}`,
+      method: 'POST',
+    });
+  },
+  getOrderList: (data = {}) => {
+    return request({
+      url: `/user/order/${data.openid}}`,
+      method: 'GET',
+    });
+  }
 };
 
 export default api;

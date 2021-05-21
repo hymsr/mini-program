@@ -7,7 +7,8 @@
 		"pages/failPage/failPage",
 		"pages/orderList/orderList",
 		"pages/scoreHistory/scoreHistory",
-		"pages/Settlement/Settlement"
+		"pages/Settlement/Settlement",
+		"pages/orderList/orderDetail/orderDetail"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

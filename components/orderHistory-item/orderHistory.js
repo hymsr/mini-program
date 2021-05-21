@@ -1,22 +1,25 @@
 // components/orderHistory-item/orderHistory.js
 Component({
-	/**
-	 * 组件的属性列表
-	 */
 	properties: {
-		
+		goodsName: {
+			type: String,
+		},
+		url: {
+			type: String,	
+		},
+		needScores: {
+			type: Number,
+		},
+		time: {
+			type: Number,
+		},
+		status: {
+			type: String,
+		}
 	},
-
-	/**
-	 * 组件的初始数据
-	 */
 	data: {
 
 	},
-
-	/**
-	 * 组件的方法列表
-	 */
 	methods: {
 
 	}

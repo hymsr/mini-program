@@ -1,9 +1,18 @@
-.goodsItem {
+.scoreItem {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-content: center;
+	box-sizing: border-box;
+	border-radius: 2%;
+	margin-top: 8rpx;
+	background-color: white;
 }
 .left {
 	display: flex;
 	flex-direction: column;
+}
+.right {
+	display: flex;
+	align-items: center;
 }

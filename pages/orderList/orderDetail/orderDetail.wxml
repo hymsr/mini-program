@@ -29,10 +29,4 @@
 			</view>
 		</view>
 	</view>
-	<view class="fiex-x-center">
-		<view class="button-area">
-			<button bindtap="buy" type="primary"  class="button">确认购买</button>
-			<button bindtap="cancel" class="button">取消</button>
-		</view>
-	</view>
 </view>

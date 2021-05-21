@@ -1,10 +1,10 @@
-<view class="goodsItem">
+<view class="scoreItem">
 	<view class="left">
 		<view>
 			{{date}}
 		</view>
 		<view>
-			{{mark}}
+			{{remark}}
 		</view>
 	</view>
 	<view class="right">

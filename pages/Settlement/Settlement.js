@@ -4,9 +4,18 @@ const app = getApp();
 Page({
 	data: {
 		address: {
-			name: "name",
+			id: "id",
+			name: "测试姓名",
 			tel: "17802007048",
-			detailAddress: "123-131-123",
+			detailAddress: "123-321-123",
+		},
+		commodity: {
+			id: "id",
+			name: "小米手机",
+			needScores: "500",
+			image: "https://www.liiux.cn/server/image/commodity/72cfc318835e4979b9524dc758c4301d.jpeg",
+			inventory: "inventory",
+			isForSale: 1,
 		},
 	},
 	onLoad: function (match) {
@@ -32,18 +41,32 @@ Page({
 			}
 		})();
 	},
-	method: {
-		edit() {
-			console.log(1);
-			wx.navigateTo({
-				url: '/pages/fillLocation/fill-location',
-			});
-		},
-	},
 	edit() {
-		console.log(1);
 		wx.navigateTo({
 			url: '/pages/fillLocation/fill-location',
+		});
+	},
+	buy() {
+		api.createOrder({
+			openid: app.globalData.openid,
+			addressId: this.data.address.id,
+			commodityId: this.data.commodity.id,
+		}).then(res => {
+			wx.showModal({
+				title: '提示',
+				content: '购买成功',
+				showCancel: false,
+				success: () => {
+					wx.navigateBack({
+						delta: 1,
+					});
+				},
+			});
+		});
+	},
+	cancel() {
+		wx.navigateBack({
+			delta: 1,
 		});
 	},
 	onReady: function () {

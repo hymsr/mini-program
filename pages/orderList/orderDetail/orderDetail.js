@@ -1,27 +1,18 @@
-import api from "../../api/index";
-const app = getApp();
-
-// pages/scoreHistory/scoreHistory.js
+// pages/orderList/orderDetail/orderDetail.js
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		scoreChangeList: [
-			{
-				"id": 1,
-				"changeScores": 3,
-				"time": 160000000000, 
-				"remark": "remark"
-			},
-		],
+
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
+
 	},
 
 	/**
@@ -35,13 +26,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-		api.getScoreHistory({
-			openid: app.globalData.openid,
-		}).then(res => {
-			this.setData({
-				scoreChangeList: res.scoreChangeList,
-			});
-		});
+
 	},
 
 	/**

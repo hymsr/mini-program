@@ -3,7 +3,13 @@ const app = getApp();
 
 Page({
   data: {
-    addressList: [],
+    addressList: [
+      {
+        tel: '17802007046',
+        detailAddress: '123-321-123',
+        name: '测试姓名',
+      },
+    ],
   },
   onLoad: function () {
   },

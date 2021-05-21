@@ -1,2 +1,17 @@
-<!--components/orderHistory-item/orderHistory.wxml-->
-<text>components/orderHistory-item/orderHistory.wxml</text>
+<view class="orderCard">
+	<view class="header">
+		<view>
+			{{goodsName}} 
+		</view>
+		<view>
+			{{status}}
+		</view>
+	</view>
+	<view class="middle">
+		<fixImage	src="{{url}}" fixHeight="50"/>
+		<view>-{{needScores}}</view>
+	</view>
+	<view>
+		{{time}}
+	</view>
+</view>

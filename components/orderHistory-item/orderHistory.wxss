@@ -1,1 +1,18 @@
-/* components/orderHistory-item/orderHistory.wxss */
+.orderCard {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	border-radius: 2%;
+	margin-top: 8rpx;
+	background-color: white;
+}
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.middle {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}

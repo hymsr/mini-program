@@ -1,2 +1,9 @@
-<!--pages/orderList/orderList.wxml-->
-<text>pages/orderList/orderList.wxml</text>
+<view>
+	<view class="address-container">
+		<view wx:for="{{orderList}}" wx:key="idx" wx:for-item="item">
+			<orderItem goodsName="{{item.commodity.name}}" url="{{item.commodity.image}}"
+				needScores="{{item.commodity.image}}" time="{{item.time}}" status="{{item.status}}"/>
+			<div-line />
+		</view>
+	</view>
+</view>

@@ -5,9 +5,11 @@
   height: 180rpx;
 	width: 100%;
 	border: 1px solid #555;
+	background-color: white;
 }
 /* components/address-item/addressItem.wxss */
 .card {
+	background-color: white;
 	display: flex;
 	justify-content: center;
 	box-sizing: border-box;
@@ -43,4 +45,14 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+}
+.goods-card {
+	background-color: white;
+	border: 1px solid #555;
+	margin-top: 32rpx;
+}
+.fiex-x-center {
+	position: absolute;
+	bottom: 0rpx;
+	width: 100%;
 }

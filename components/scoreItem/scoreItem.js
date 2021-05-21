@@ -4,7 +4,7 @@ Component({
 	lifetimes: {
     attached: function() {
       this.setData({
-				data: moment.unix(this.properties.time / 1000).format('YYYY-MM-DD HH:mm:ss'),
+				date: moment.unix(this.properties.time / 1000).format('YYYY-MM-DD HH:mm:ss'),
 			})
     },
     detached: function() {
@@ -12,9 +12,6 @@ Component({
     },
   },
 	properties: {
-		id: {
-			type: Number,
-		},
 		changeScores: {
 			type: Number,
 		},
