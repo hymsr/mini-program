@@ -12,6 +12,6 @@
 		<view>-{{needScores}}</view>
 	</view>
 	<view>
-		{{time}}
+		{{date}}
 	</view>
 </view>

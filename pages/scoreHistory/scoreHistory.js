@@ -8,14 +8,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		scoreChangeList: [
-			{
-				"id": 1,
-				"changeScores": 3,
-				"time": 160000000000, 
-				"remark": "remark"
-			},
-		],
+		scoreChangeList: [],
 	},
 
 	/**

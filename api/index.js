@@ -5,7 +5,8 @@ const doNothing = () => { };
 //   return;
 // };
 
-const host = 'https://www.liiux.cn/server';
+const host = 'http://localhost:8080';
+const pHost = 'http://localhost:5000';
 
 const handleErr = (msg) => {
     wx.showModal({
@@ -36,10 +37,37 @@ const request = ({ data, url, method = 'POST' } = {}) => {
   }));
 };
 
+const requestP = ({ data, url, method = 'POST' } = {}) => {
+  return new Promise((resolve, reject) => wx.request({
+    method,
+    data,
+    timeout: 30000,
+    success: (res) => {
+      if (res.data.code === 0) {
+        resolve(res.data.data);
+        return;
+      };
+      handleErr(res.data.msg);
+      reject(res.data.msg);
+    },
+    fail: (res) => {
+      handleErr(res.errMsg);
+      reject(res.errMsg);
+    },
+    url: `${pHost}${url}`
+  }));
+};
+
 const api = {
   getOpenId: (data = {}) => {
     return request({
       url: `/user/openid/${data.code}`,
+      method: 'GET',
+    });
+  },
+  getScore: (data = {}) => {
+    return request({
+      url: `/user/${data.openid}`,
       method: 'GET',
     });
   },
@@ -72,13 +100,13 @@ const api = {
   setDefaultAddress: (data = {}) => {
     return request({
       data,
-      url: `/user/defalutAddress/${data.openid}/${data.addressId}`,
+      url: `/user/defaultAddress/${data.openid}/${data.addressId}`,
       method: 'PUT',
     });
   },
   getDefaultAddress: (data = {}) => {
     return request({
-      url: `/user/defalutAddress/${data.openid}`,
+      url: `/user/defaultAddress/${data.openid}`,
       method: 'GET',
     });
   },
@@ -102,16 +130,23 @@ const api = {
   },
   createOrder: (data = {}) => {
     return request({
-      url: `/order/${data.openid}}/${data.addressId}/${data.commodityId}`,
+      url: `/order/${data.openid}/${data.addressId}/${data.commodityId}`,
       method: 'POST',
     });
   },
   getOrderList: (data = {}) => {
     return request({
-      url: `/user/order/${data.openid}}`,
+      url: `/user/order/${data.openid}`,
       method: 'GET',
     });
-  }
+  },
+  commitVideo: (data = {}) => {
+    return requestP({
+      data,
+      url: `/test/reg`,
+      method: 'POST',
+    });
+  },
 };
 
 export default api;

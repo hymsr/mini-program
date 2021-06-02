@@ -29,6 +29,9 @@
 			</view>
 		</view>
 	</view>
+	<view class="goods-card">
+		剩余积分:{{score}}
+	</view>
 	<view class="fiex-x-center">
 		<view class="button-area">
 			<button bindtap="buy" type="primary"  class="button">确认购买</button>

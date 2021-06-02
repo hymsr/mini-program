@@ -2,7 +2,7 @@
 	<view class="address-container">
 		<view wx:for="{{orderList}}" wx:key="idx" wx:for-item="item">
 			<orderItem goodsName="{{item.commodity.name}}" url="{{item.commodity.image}}"
-				needScores="{{item.commodity.image}}" time="{{item.time}}" status="{{item.status}}"/>
+				needScores="{{item.commodity.needScores}}" time="{{item.time}}" status="{{item.status}}"/>
 			<div-line />
 		</view>
 	</view>

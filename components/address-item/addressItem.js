@@ -23,6 +23,9 @@ Component({
 			type: Function,
 			value: () => {},
 		},
+		isDefault: {
+			type: Boolean,
+		}
 	},
 	data: {
 		checkbox: [

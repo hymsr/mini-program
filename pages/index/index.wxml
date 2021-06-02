@@ -1,13 +1,8 @@
 <view class="index-page">
     <navigator id="navigator" open-type="exit" target="miniProgram" />
     <view hidden="{{currentIndex !== 0}}" class="photo-enter">    
-        <view class="video">
-            <camera wx:if="{{videoSrc.length === 0}}" device-position="font" flash="off" binderror="error" style="width: {{cameraWidth}}px;height: 900rpx;">
-            </camera>
-            <video style="width: {{cameraWidth}}px; height: 442rpx;" wx:else src="{{videoSrc}}" controls></video>
-        </view>
-        <button class="btn" id='btn-photo' bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" bindlongpress="handleLongPress">
-            按住录制
+        <button class="btn" id='btn-photo' bindtap="recordVideo">
+            录制视频
         </button>
     </view>
     <view hidden="{{currentIndex !== 1}}" class="shopping-enter">

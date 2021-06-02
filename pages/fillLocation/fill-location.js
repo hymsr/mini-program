@@ -3,13 +3,7 @@ const app = getApp();
 
 Page({
   data: {
-    addressList: [
-      {
-        tel: '17802007046',
-        detailAddress: '123-321-123',
-        name: '测试姓名',
-      },
-    ],
+    addressList: [],
   },
   onLoad: function () {
   },
@@ -21,7 +15,9 @@ Page({
     api.getAllAddress({
       openid: app.globalData.openid,
     }).then((res) => {
-      this.data.addressList = res;
+      this.setData({
+        addressList: res.addressList,
+      });
     }).finally(() => wx.hideLoading());
   },
   newAddress() {

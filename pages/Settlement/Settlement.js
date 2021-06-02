@@ -4,22 +4,12 @@ const app = getApp();
 Page({
 	data: {
 		address: {
-			id: "id",
-			name: "测试姓名",
-			tel: "17802007048",
-			detailAddress: "123-321-123",
 		},
 		commodity: {
-			id: "id",
-			name: "小米手机",
-			needScores: "500",
-			image: "https://www.liiux.cn/server/image/commodity/72cfc318835e4979b9524dc758c4301d.jpeg",
-			inventory: "inventory",
-			isForSale: 1,
 		},
 	},
 	onLoad: function (match) {
-		(async function () {
+		(async () => {
 			wx.showLoading({
 				title: '加载中',
 				mask: 'true',
@@ -31,9 +21,13 @@ Page({
 				const good = await api.getGoodsItem({
 					id: match.id,
 				});
+				const score = await api.getScore({
+					openid: app.globalData.openid,
+				});
 				this.setData({
 					address: address.address,
-					good: good.commodity,
+					commodity: good.commodity,
+					score: score.scores,
 				});
 				wx.hideLoading();
 			} catch (e) {
